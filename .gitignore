@@ -1,0 +1,74 @@
+# Python-related
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv/
+*.egg-info/
+*.eggs/
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg
+*.egg-info/
+
+# Logs
+*.log
+*.out
+*.err
+logs/
+*.trace
+
+# Test-related
+.tox/
+.nox/
+.coverage
+*.cover
+htmlcov/
+.cache/
+pytest_cache/
+.pytest_cache/
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE / Editor-related
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*~
+
+# OS-related
+.DS_Store
+Thumbs.db
+
+# Pre-commit hooks
+.pre-commit-config.yaml
+
+# Sphinx documentation
+docs/_build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local configuration files
+*.local
+*.bak
+*.old
+
+# Linter directories and files
+.mypy_cache/
+flake8.log
+
+# Temporary files
+tmp/
+temp/
