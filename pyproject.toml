@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mydatanaut"
+version = "0.1.0"
+description = "Python library for AADE myData REST API"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Thanos Theodoridis", email = "at@atworks.gr" }
+]
+maintainers = []
+keywords = ["AADE", "myData", "API"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "requests",
+    "xsdata",
+]
+
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+    "python-dotenv"
+]
+
+[project.urls]
+Homepage = "https://github.com/attheodo/mydatanaut"
+"Bug Tracker" = "https://github.com/attheodo/mydatanaut/issues"
+
+[tool.setuptools]
+package-dir = {"" = "mydata"}
+
+[tool.setuptools.packages.find]
+where = ["mydata"]
