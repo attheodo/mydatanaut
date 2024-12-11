@@ -6,7 +6,7 @@ from .party import Party
 
 
 @dataclass
-class InvoiceHeaderType:
+class InvoiceHeader:
     series: str = ""
     aa: str = ""
     issueDate: str = ""
