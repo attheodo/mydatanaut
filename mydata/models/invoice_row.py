@@ -3,7 +3,7 @@ from typing import List, Optional
 
 
 @dataclass
-class InvoiceRowType:
+class InvoiceRow:
     lineNumber: int = 1
     recType: Optional[int] = None
     TaricNo: Optional[str] = None
