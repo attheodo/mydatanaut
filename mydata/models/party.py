@@ -47,3 +47,13 @@ class Party:
     documentIdNo: Optional[str] = None
     supplyAccountNo: Optional[str] = None
     countryDocumentId: Optional[str] = None
+
+
+@dataclass
+class Issuer(Party):
+    pass
+
+
+@dataclass
+class Counterpart(Party):
+    pass
