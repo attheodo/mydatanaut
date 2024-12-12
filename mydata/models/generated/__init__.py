@@ -10,32 +10,32 @@ from mydata.models.generated.continuation_token_type_2 import (
 from mydata.models.generated.continuation_token_type_3 import (
     ContinuationTokenType3,
 )
-from mydata.models.generated.country_type import Country
-from mydata.models.generated.currency_type import Currency
+from mydata.models.generated.country_type import CountryType
+from mydata.models.generated.currency_type import CurrencyType
 from mydata.models.generated.ecrtoken_type import Ecrtoken
 from mydata.models.generated.entity_type import Entity
 from mydata.models.generated.error_type import Error
 from mydata.models.generated.expenses_classification_category_type import (
-    ExpensesClassificationCategory,
+    ExpensesClassificationCategoryType,
 )
 from mydata.models.generated.expenses_classification_type import (
     ExpensesClassification,
 )
 from mydata.models.generated.expenses_classification_value_type import (
-    ExpensesClassificationValue,
+    ExpensesClassificationValueType,
 )
 from mydata.models.generated.expenses_classifications_doc import (
     ExpensesClassificationsDoc,
 )
 from mydata.models.generated.fuel_codes import FuelCodes
 from mydata.models.generated.income_classification_category_type import (
-    IncomeClassificationCategory,
+    IncomeClassificationCategoryType,
 )
 from mydata.models.generated.income_classification_type import (
     IncomeClassification,
 )
 from mydata.models.generated.income_classification_value_type import (
-    IncomeClassificationValue,
+    IncomeClassificationValueType,
 )
 from mydata.models.generated.income_classifications_doc import (
     IncomeClassificationsDoc,
@@ -50,7 +50,7 @@ from mydata.models.generated.invoice_income_classification_type import (
 from mydata.models.generated.invoice_provider_type import InvoiceProvider
 from mydata.models.generated.invoice_row_type import InvoiceRow
 from mydata.models.generated.invoice_summary_type import InvoiceSummary
-from mydata.models.generated.invoice_type import Invoice
+from mydata.models.generated.invoice_type import InvoiceType
 from mydata.models.generated.invoice_vat_detail_type import InvoiceVatDetail
 from mydata.models.generated.invoices_doc import InvoicesDoc
 from mydata.models.generated.invoices_expenses_classification_detail_type import (
@@ -89,19 +89,19 @@ __all__ = [
     "ContinuationTokenType1",
     "ContinuationTokenType2",
     "ContinuationTokenType3",
-    "Country",
-    "Currency",
+    "CountryType",
+    "CurrencyType",
     "Ecrtoken",
     "Entity",
     "Error",
-    "ExpensesClassificationCategory",
+    "ExpensesClassificationCategoryType",
     "ExpensesClassification",
-    "ExpensesClassificationValue",
+    "ExpensesClassificationValueType",
     "ExpensesClassificationsDoc",
     "FuelCodes",
-    "IncomeClassificationCategory",
+    "IncomeClassificationCategoryType",
     "IncomeClassification",
-    "IncomeClassificationValue",
+    "IncomeClassificationValueType",
     "IncomeClassificationsDoc",
     "InvoiceExpensesClassification",
     "InvoiceHeader",
@@ -109,7 +109,7 @@ __all__ = [
     "InvoiceProvider",
     "InvoiceRow",
     "InvoiceSummary",
-    "Invoice",
+    "InvoiceType",
     "InvoiceVatDetail",
     "InvoicesDoc",
     "InvoicesExpensesClassificationDetail",

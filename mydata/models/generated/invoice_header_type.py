@@ -4,9 +4,9 @@ from typing import List, Optional
 
 from xsdata.models.datatype import XmlDate, XmlTime
 
-from mydata.models.generated.currency_type import Currency
+from mydata.models.generated.currency_type import CurrencyType
 from mydata.models.generated.entity_type import Entity
-from mydata.models.generated.invoice_type import Invoice
+from mydata.models.generated.invoice_type import InvoiceType
 from mydata.models.generated.other_delivery_note_header_type import (
     OtherDeliveryNoteHeader,
 )
@@ -75,7 +75,7 @@ class InvoiceHeader:
             "required": True,
         },
     )
-    invoice_type: Optional[Invoice] = field(
+    invoice_type: Optional[InvoiceType] = field(
         default=None,
         metadata={
             "name": "invoiceType",
@@ -92,7 +92,7 @@ class InvoiceHeader:
             "namespace": "http://www.aade.gr/myDATA/invoice/v1.0",
         },
     )
-    currency: Optional[Currency] = field(
+    currency: Optional[CurrencyType] = field(
         default=None,
         metadata={
             "type": "Element",
