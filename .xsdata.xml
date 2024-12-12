@@ -30,7 +30,7 @@
     <Substitution type="package" search="http://schemas.xmlsoap.org/wsdl/soap/" replace="soap"/>
     <Substitution type="package" search="http://schemas.xmlsoap.org/wsdl/soap12/" replace="soap12"/>
     <Substitution type="package" search="http://schemas.xmlsoap.org/soap/envelope/" replace="soapenv"/>
-    <Substitution type="class" search="(.*)Class$" replace="\1Type"/>
+    <Substitution type="class" search="(.*)Type$" replace="\1"/>
   </Substitutions>
   <Extensions/>
 </Config>
