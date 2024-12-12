@@ -3,7 +3,7 @@ from enum import Enum
 __NAMESPACE__ = "https://www.aade.gr/myDATA/incomeClassificaton/v1.0"
 
 
-class IncomeClassificationValueType(Enum):
+class IncomeClassificationValue(Enum):
     E3_106 = "E3_106"
     E3_205 = "E3_205"
     E3_210 = "E3_210"

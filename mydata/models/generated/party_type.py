@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from mydata.models.generated.address_type import Address
-from mydata.models.generated.country_type import CountryType
+from mydata.models.generated.country_type import Country
 
 __NAMESPACE__ = "http://www.aade.gr/myDATA/invoice/v1.0"
 
@@ -34,7 +34,7 @@ class Party:
             "max_length": 30,
         },
     )
-    country: Optional[CountryType] = field(
+    country: Optional[Country] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -83,7 +83,7 @@ class Party:
             "max_length": 100,
         },
     )
-    country_document_id: Optional[CountryType] = field(
+    country_document_id: Optional[Country] = field(
         default=None,
         metadata={
             "name": "countryDocumentId",

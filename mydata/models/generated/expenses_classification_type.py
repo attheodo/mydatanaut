@@ -3,10 +3,10 @@ from decimal import Decimal
 from typing import Optional
 
 from mydata.models.generated.expenses_classification_category_type import (
-    ExpensesClassificationCategoryType,
+    ExpensesClassificationCategory,
 )
 from mydata.models.generated.expenses_classification_value_type import (
-    ExpensesClassificationValueType,
+    ExpensesClassificationValue,
 )
 
 __NAMESPACE__ = "https://www.aade.gr/myDATA/expensesClassificaton/v1.0"
@@ -28,7 +28,7 @@ class ExpensesClassification:
     class Meta:
         name = "ExpensesClassificationType"
 
-    classification_type: Optional[ExpensesClassificationValueType] = field(
+    classification_type: Optional[ExpensesClassificationValue] = field(
         default=None,
         metadata={
             "name": "classificationType",
@@ -36,15 +36,13 @@ class ExpensesClassification:
             "namespace": "https://www.aade.gr/myDATA/expensesClassificaton/v1.0",
         },
     )
-    classification_category: Optional[ExpensesClassificationCategoryType] = (
-        field(
-            default=None,
-            metadata={
-                "name": "classificationCategory",
-                "type": "Element",
-                "namespace": "https://www.aade.gr/myDATA/expensesClassificaton/v1.0",
-            },
-        )
+    classification_category: Optional[ExpensesClassificationCategory] = field(
+        default=None,
+        metadata={
+            "name": "classificationCategory",
+            "type": "Element",
+            "namespace": "https://www.aade.gr/myDATA/expensesClassificaton/v1.0",
+        },
     )
     amount: Optional[Decimal] = field(
         default=None,

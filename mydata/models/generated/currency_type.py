@@ -3,7 +3,7 @@ from enum import Enum
 __NAMESPACE__ = "http://www.aade.gr/myDATA/invoice/v1.0"
 
 
-class CurrencyType(Enum):
+class Currency(Enum):
     AED = "AED"
     AFN = "AFN"
     ALL = "ALL"

@@ -3,10 +3,10 @@ from decimal import Decimal
 from typing import Optional
 
 from mydata.models.generated.income_classification_category_type import (
-    IncomeClassificationCategoryType,
+    IncomeClassificationCategory,
 )
 from mydata.models.generated.income_classification_value_type import (
-    IncomeClassificationValueType,
+    IncomeClassificationValue,
 )
 
 __NAMESPACE__ = "https://www.aade.gr/myDATA/incomeClassificaton/v1.0"
@@ -25,7 +25,7 @@ class IncomeClassification:
     class Meta:
         name = "IncomeClassificationType"
 
-    classification_type: Optional[IncomeClassificationValueType] = field(
+    classification_type: Optional[IncomeClassificationValue] = field(
         default=None,
         metadata={
             "name": "classificationType",
@@ -33,16 +33,14 @@ class IncomeClassification:
             "namespace": "https://www.aade.gr/myDATA/incomeClassificaton/v1.0",
         },
     )
-    classification_category: Optional[IncomeClassificationCategoryType] = (
-        field(
-            default=None,
-            metadata={
-                "name": "classificationCategory",
-                "type": "Element",
-                "namespace": "https://www.aade.gr/myDATA/incomeClassificaton/v1.0",
-                "required": True,
-            },
-        )
+    classification_category: Optional[IncomeClassificationCategory] = field(
+        default=None,
+        metadata={
+            "name": "classificationCategory",
+            "type": "Element",
+            "namespace": "https://www.aade.gr/myDATA/incomeClassificaton/v1.0",
+            "required": True,
+        },
     )
     amount: Optional[Decimal] = field(
         default=None,

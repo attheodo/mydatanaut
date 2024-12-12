@@ -10,32 +10,32 @@ from mydata.models.generated.continuation_token_type_2 import (
 from mydata.models.generated.continuation_token_type_3 import (
     ContinuationTokenType3,
 )
-from mydata.models.generated.country_type import CountryType
-from mydata.models.generated.currency_type import CurrencyType
+from mydata.models.generated.country_type import Country
+from mydata.models.generated.currency_type import Currency
 from mydata.models.generated.ecrtoken_type import Ecrtoken
 from mydata.models.generated.entity_type import Entity
 from mydata.models.generated.error_type import Error
 from mydata.models.generated.expenses_classification_category_type import (
-    ExpensesClassificationCategoryType,
+    ExpensesClassificationCategory,
 )
 from mydata.models.generated.expenses_classification_type import (
     ExpensesClassification,
 )
 from mydata.models.generated.expenses_classification_value_type import (
-    ExpensesClassificationValueType,
+    ExpensesClassificationValue,
 )
 from mydata.models.generated.expenses_classifications_doc import (
     ExpensesClassificationsDoc,
 )
 from mydata.models.generated.fuel_codes import FuelCodes
 from mydata.models.generated.income_classification_category_type import (
-    IncomeClassificationCategoryType,
+    IncomeClassificationCategory,
 )
 from mydata.models.generated.income_classification_type import (
     IncomeClassification,
 )
 from mydata.models.generated.income_classification_value_type import (
-    IncomeClassificationValueType,
+    IncomeClassificationValue,
 )
 from mydata.models.generated.income_classifications_doc import (
     IncomeClassificationsDoc,
@@ -89,19 +89,19 @@ __all__ = [
     "ContinuationTokenType1",
     "ContinuationTokenType2",
     "ContinuationTokenType3",
-    "CountryType",
-    "CurrencyType",
+    "Country",
+    "Currency",
     "Ecrtoken",
     "Entity",
     "Error",
-    "ExpensesClassificationCategoryType",
+    "ExpensesClassificationCategory",
     "ExpensesClassification",
-    "ExpensesClassificationValueType",
+    "ExpensesClassificationValue",
     "ExpensesClassificationsDoc",
     "FuelCodes",
-    "IncomeClassificationCategoryType",
+    "IncomeClassificationCategory",
     "IncomeClassification",
-    "IncomeClassificationValueType",
+    "IncomeClassificationValue",
     "IncomeClassificationsDoc",
     "InvoiceExpensesClassification",
     "InvoiceHeader",
