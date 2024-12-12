@@ -34,7 +34,7 @@
     <Substitution type="package" search="http://schemas.xmlsoap.org/soap/envelope/"
       replace="soapenv" />
     <Substitution type="class"
-      search="^(CountryType|CurrencyType|ExpensesClassificationCategoryType|ExpensesClassificationValueType|IncomeClassificationValueType|IncomeClassificationCategoryType|InvoiceType)$"
+      search="^(InvoiceType)$"
       replace="\1Type" />
     <Substitution type="class" search="(.*)Type$" replace="\1" />
   </Substitutions>
