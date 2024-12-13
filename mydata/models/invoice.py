@@ -2,8 +2,11 @@ from typing import Optional
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
+from mydata.utils.summarize_invoice import SummarizeInvoice
+
 from .counterpart import Counterpart
 from .generated.aade_book_invoice_type import AadeBookInvoice
+from .generated.invoice_summary_type import InvoiceSummary
 from .generated.payment_method_detail_type import PaymentMethodDetail
 from .generated.tax_totals_type import TaxTotals
 from .issuer import Issuer
@@ -28,3 +31,8 @@ class Invoice(AadeBookInvoice):
         if not self.taxes_totals:
             self.taxes_totals = AadeBookInvoice.TaxesTotals()
         self.taxes_totals.taxes.append(tax)
+
+    def summarize(self) -> InvoiceSummary:
+        s = SummarizeInvoice().handle(invoice=self)
+        self.invoice_summary = s
+        return s
