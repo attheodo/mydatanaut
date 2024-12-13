@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class WitheldPercentCategory(int, Enum):
+class WithheldPercentCategory(int, Enum):
     # Περιπτ. β’- Τόκοι - 15%
     TAX_1 = 1
     #  Περιπτ. γ’ - Δικαιώματα - 20%
@@ -38,3 +38,11 @@ class WitheldPercentCategory(int, Enum):
     TAX_17 = 17
     #  Παρακράτηση Φόρου Μερίσματα περ.α παρ. 1 αρ. 64 ν. 4172/2013 5%
     TAX_18 = 18
+
+    @property
+    def affects_total_gross_value(self) -> bool:
+        return self not in [
+            WithheldPercentCategory.TAX_8,
+            WithheldPercentCategory.TAX_9,
+            WithheldPercentCategory.TAX_10,
+        ]
