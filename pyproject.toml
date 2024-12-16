@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mydatanaut"
-version = "0.1.0"
+version = "0.1.2"
 description = "Python library for AADE myData REST API"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -36,8 +36,5 @@ dev = [
 Homepage = "https://github.com/attheodo/mydatanaut"
 "Bug Tracker" = "https://github.com/attheodo/mydatanaut/issues"
 
-[tool.setuptools]
-package-dir = {"" = "mydata"}
-
 [tool.setuptools.packages.find]
-where = ["mydata"]
+where = ["."]
