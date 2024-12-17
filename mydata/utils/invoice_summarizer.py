@@ -15,9 +15,15 @@ class InvoiceSummarizer:
         rows_summarizer.summarize_rows()
         rows_summarizer.save_totals(summary)
 
-        taxes_summarizer = InvoiceTaxesSummarizer(taxes=self.invoice.taxes_totals.taxes)
-        taxes_summarizer.summarize_taxes()
-        taxes_summarizer.save_totals(summary)
+        if (
+            getattr(self.invoice, "taxes_totals", None)
+            and self.invoice.taxes_totals.taxes
+        ):
+            taxes_summarizer = InvoiceTaxesSummarizer(
+                taxes=self.invoice.taxes_totals.taxes
+            )
+            taxes_summarizer.summarize_taxes()
+            taxes_summarizer.save_totals(summary)
 
         classifications_group = ClassificationsGrouper(
             rows=self.invoice.invoice_details

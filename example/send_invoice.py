@@ -1,5 +1,6 @@
 import os
 import sys
+from decimal import Decimal
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -82,26 +83,26 @@ def create_invoice() -> Invoice:
 
     payment = PaymentMethodDetail()
     payment.type_value = PaymentMethodType.BANK_ACC_LOCAL
-    payment.amount = 1300
+    payment.amount = Decimal(1300)
     payment.payment_method_info = "Some type of info"
 
     row = InvoiceRow()
     row.line_number = 1
-    row.net_value = 1000
+    row.net_value = Decimal(1000)
     row.vat_category = VatCategory.VAT_1
-    row.vat_amount = 240
+    row.vat_amount = Decimal(240)
     row.income_classification = [
         IncomeClassification(
             classification_type=IncomeClassificationValue.E3_561_001,
             classification_category=IncomeClassificationCategory.CATEGORY1_3,
-            amount=1000,
+            amount=Decimal(1000),
         )
     ]
     tax = TaxTotals()
     tax.tax_type = TaxType.TYPE_1
     tax.tax_category = WithheldPercentCategory.TAX_2
-    tax.underlying_value = 1000
-    tax.tax_amount = 200
+    tax.underlying_value = Decimal(1000)
+    tax.tax_amount = Decimal(200)
 
     invoice = Invoice()
     invoice.issuer = issuer
