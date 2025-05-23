@@ -28,7 +28,6 @@ def main():
 
     try:
         response_doc = client.request_transmitted_docs()
-        print(response_doc)
 
     except MyDataException as http_err:
         print("HTTP error occurred:", http_err)
