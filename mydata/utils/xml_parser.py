@@ -3,6 +3,7 @@ from typing import Any, Type
 
 from xsdata.formats.dataclass.context import XmlContext
 from xsdata.formats.dataclass.parsers import XmlParser
+from xsdata.formats.dataclass.parsers.config import ParserConfig
 
 
 class XMLResponseParser:
@@ -14,7 +15,8 @@ class XMLResponseParser:
     }
 
     def __init__(self):
-        self.parser = XmlParser(context=XmlContext())
+        config = ParserConfig(fail_on_unknown_properties=False)
+        self.parser = XmlParser(context=XmlContext(), config=config)
 
     def parse(self, xml_data: str, model: Type[Any]) -> Any:
         try:
